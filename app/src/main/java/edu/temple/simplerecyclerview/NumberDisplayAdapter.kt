@@ -4,14 +4,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-// Step 3: Complete adapter implementation
-
 class NumberDisplayAdapter(private val nums:Array<Int>) : RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() {
 
     class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-        return NumberViewHolder(TextView(parent.context).apply{layoutParams=ViewGroup.LayoutParams(150,150)})
+        return NumberViewHolder(TextView(parent.context).apply{layoutParams=ViewGroup.LayoutParams(70,50)})
     }
 
     override fun getItemCount():Int{
