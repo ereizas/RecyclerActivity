@@ -11,7 +11,7 @@ class NumberDisplayAdapter(val nums:Array<Int>) : RecyclerView.Adapter<NumberDis
     class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-
+        return NumberViewHolder(TextView(parent.context).apply{layoutParams=ViewGroup.LayoutParams(150,150)})
     }
 
     override fun getItemCount():Int{
