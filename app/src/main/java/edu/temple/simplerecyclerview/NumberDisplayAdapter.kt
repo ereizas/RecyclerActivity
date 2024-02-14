@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 // Step 3: Complete adapter implementation
 
-class NumberDisplayAdapter(val nums:Array<Int>) : RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() {
+class NumberDisplayAdapter(private val nums:Array<Int>) : RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() {
 
     class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
 
@@ -19,6 +19,6 @@ class NumberDisplayAdapter(val nums:Array<Int>) : RecyclerView.Adapter<NumberDis
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.textView.text=nums[position].toString()
     }
 }
